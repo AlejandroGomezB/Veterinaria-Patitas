@@ -1,0 +1,7 @@
+anchura-titulo{
+    width: max-content;
+}
+
+:host {
+    height: 100%
+}

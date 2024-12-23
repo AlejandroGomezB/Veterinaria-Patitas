@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+      <div class="col.md-12">
+        <div style="margin-top: 5%;">
+          <h1 class="text-black font-weight-bold">Eliminar cita</h1>
+        </div>
+      </div>
+      <div class="col-md-12 ">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Numero Cita</th>
+                <th scope="col">Nombre Cliente</th>
+                <th scope="col">Nombre Mascota</th>
+                <th scope="col">Razon Cita</th>
+                <th scope="col">Fecha de cita</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let cita of citas">
+                <th scope="row">{{cita.id}}</th>
+                <td>{{cita.cliente}}</td>
+                <td>{{cita.mascota}}</td>
+                <td>{{cita.motivo}}</td>
+                <td>{{cita.fecha}}</td>
+                <td><p><a (click)="eliminarCita(cita.id)" class="btn bg-danger text-white" role="button">Eliminar</a></p></td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+    <div class="col-md-12 mt-4" style="padding-left: 50%;">
+        <p><a [routerLink]="['']" class="btn bg-primary text-white" role="button">Regresar a Inicio</a></p>
+    </div>
+</div>
+
+
